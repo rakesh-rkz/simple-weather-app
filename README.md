@@ -38,14 +38,14 @@ A lightweight, responsive weather application built using **React**, **Vite**, a
 ## 📦 Installation
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/rakesh-rkz/simple-weather-app.git
-   cd simple-weather-app
-    ```
+```bash
+git clone https://github.com/rakesh-rkz/simple-weather-app.git
+cd simple-weather-app
+```
 2. **Install dependencies**:
-    ```bash
-    npm install
-    ```
+```bash
+npm install
+```
 
 3. **Create a .env file**:
 ```bash
