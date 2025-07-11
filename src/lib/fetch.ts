@@ -39,7 +39,7 @@ export const getWeather = ({ payload }: GetWeatherParams) => {
     const apiKey = import.meta.env.VITE_API_KEY;
 
     if (!baseUrl || !apiKey) {
-        throw new Error("Missing REACT_APP_WEATHER_API_URL or REACT_APP_API_KEY");
+        throw new Error(`Missing ${!baseUrl ? "REACT_APP_WEATHER_API_URL":" REACT_APP_API_KEY" }`);
     }
 
     const url = `${baseUrl}?key=${apiKey}&q=${payload}&days=1&aqi=yes&alerts=no`;
