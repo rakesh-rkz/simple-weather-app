@@ -24,6 +24,12 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Set Environment Variables
+        run: |
+          echo "VITE_API_KEY=${{ secrets.REACT_APP_API_KEY }}" >> .env
+          echo "VITE_WEATHER_API_URL=${{ vars.VITE_WEATHER_API_URL }}" >> .env
+          echo "VITE_DEFAULT_LOCATION=${{ vars.VITE_DEFAULT_LOCATION }}" >> .env
+
       - name: Build Project
         run: npm run build
 
