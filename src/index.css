@@ -12,6 +12,7 @@ body {
   animation: rotate 4s linear infinite;
   --color: rgb(255, 151, 67);
   --scale: 0.4;
+  z-index: 1;
 }
 
 .center {

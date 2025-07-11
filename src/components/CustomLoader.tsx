@@ -1,9 +1,5 @@
 const CustomLoader = () => {
 
-    const loading = false
-
-    if (!loading) return null;
-
     return (
         <>
             <div className="sun">
