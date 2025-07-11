@@ -1,69 +1,93 @@
-# React + TypeScript + Vite
+# 🌦️ Simple Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, responsive weather application built using **React**, **Vite**, and **Tailwind CSS**. It fetches real-time weather data from [WeatherAPI.com](https://www.weatherapi.com/) and can detect your location to show local weather automatically. If geolocation permission is denied, it defaults to **Coimbatore**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔍 Features
 
-## Expanding the ESLint configuration
+- 📍 Auto-detects user location via browser geolocation
+- 🏙️ Allows manual city search
+- 🌡️ Shows temperature, humidity, weather condition, and wind speed
+- 🎨 Clean and responsive UI using Tailwind CSS
+- ⚡ Built with fast and modern Vite + React stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📸 Preview
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+![App Screenshot](./output.png) <!-- Add a screenshot of the app if available -->
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🌐 Live Demo
+
+[https://rakesh-rkz.github.io/simple-weather-app/](https://rakesh-rkz.github.io/simple-weather-app/)
+
+---
+
+## 🛠️ Tech Stack
+
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [WeatherAPI](https://www.weatherapi.com/)
+
+---
+
+## 📦 Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/rakesh-rkz/simple-weather-app.git
+   cd simple-weather-app
+    ```
+2. **Install dependencies**:
+    ```bash
+    npm install
+    ```
+
+3. **Create a .env file**:
+```bash
+WEATHER_API_KEY=your_weatherapi_key_here
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+4. **Run the app locally**:
+```bash
+npm run dev
 ```
+
+5. **Build for production**:
+```bash
+npm run build
+```
+
+## 🚀 Deployment
+
+This app is deployed using GitHub Pages via `gh-pages` branch.
+
+
+
+## 📄 Vite Config (Important for GitHub Pages)
+Make sure your vite.config.ts contains:
+```bash
+export default defineConfig({
+  base: "/simple-weather-app/", # app name
+  plugins: [react()],
+})
+```
+
+## 🔐 API Key
+You can get a free API key from WeatherAPI.com. Store it securely in a .env file and never commit it to GitHub.
+
+
+## 👤 Author
+Name: Rakesh
+
+GitHub: @rakesh-rkz
+
+## 📃 License
+This project is open source and available under the MIT License.
+
+## 🙌 Contributions
+Feel free to fork, enhance, and create pull requests. All contributions are welcome!
